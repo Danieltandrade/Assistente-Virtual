@@ -1,4 +1,5 @@
 """
+Arquivo para exportar as funções
 """
 
 from src.audio_para_texto import get_audio

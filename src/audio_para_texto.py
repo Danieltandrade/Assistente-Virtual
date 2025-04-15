@@ -14,7 +14,7 @@ Exemplo de uso:
 
 import speech_recognition as sr
 
-def get_audio(lang):
+def get_audio(lang: str) -> str:
     """
     Função que recebe o audio e retorna a frase
 
@@ -31,7 +31,9 @@ def get_audio(lang):
         language = "pt-BR"
         get_audio(language)
     """
+
     recognizer = sr.Recognizer()
+
     with sr.Microphone() as source:
         print("Fale algo...")
         recognizer.adjust_for_ambient_noise(source, duration=1)

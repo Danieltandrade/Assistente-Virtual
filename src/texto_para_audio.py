@@ -16,7 +16,7 @@ Exemplo de uso:
 
 from gtts import gTTS
 
-def text_to_speech(text, language, tld, file) -> bool:
+def text_to_speech(text: str, language: str, tld: str, file: str) -> bool:
     """
     Converte o texto em voz e salva o arquivo de audio.
 
@@ -32,6 +32,7 @@ def text_to_speech(text, language, tld, file) -> bool:
     Raises:
         Exception: Se ocorrer um erro ao converter o texto em voz.
     """
+
     try:
         tts = gTTS(text, lang=language, tld=tld)
         tts.save(f"audios/{file}")
